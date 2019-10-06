@@ -8,14 +8,14 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
-public class CarStatus {
+public class VehicleStatus {
 
 	@Id
 	@Column(name="Status")
 	private boolean status;
 	
 	@OneToOne
-	private CarTypes cartype;
+	private VehicleTypes cartype;
 	
 	@OneToOne
 	private Guests guest;
@@ -25,7 +25,7 @@ public class CarStatus {
 	
 	@ManyToOne
 	@JoinColumn(name="Admin_Email")
-	private Admin admin;
+	private Admins admin;
 
 	public boolean isStatus() {
 		return status;
@@ -35,11 +35,11 @@ public class CarStatus {
 		this.status = status;
 	}
 
-	public CarTypes getCartype() {
+	public VehicleTypes getCartype() {
 		return cartype;
 	}
 
-	public void setCartype(CarTypes cartype) {
+	public void setCartype(VehicleTypes cartype) {
 		this.cartype = cartype;
 	}
 
@@ -59,11 +59,11 @@ public class CarStatus {
 		this.user = user;
 	}
 
-	public Admin getAdmin() {
+	public Admins getAdmin() {
 		return admin;
 	}
 
-	public void setAdmin(Admin admin) {
+	public void setAdmin(Admins admin) {
 		this.admin = admin;
 	}
 	

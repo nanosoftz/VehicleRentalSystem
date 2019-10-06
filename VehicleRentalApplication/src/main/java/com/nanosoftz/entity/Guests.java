@@ -34,10 +34,10 @@ public class Guests {
 	private String password;
 	
 	@OneToOne(mappedBy="guest")
-	private CarTypes cartype;
+	private VehicleTypes cartype;
 	
 	@OneToOne(mappedBy="guest")
-	private CarStatus carstatus;
+	private VehicleStatus carstatus;
 
 	public Long getGuestEmirateId() {
 		return guestEmirateId;
@@ -71,19 +71,19 @@ public class Guests {
 		this.password = password;
 	}
 
-	public CarTypes getCartype() {
+	public VehicleTypes getCartype() {
 		return cartype;
 	}
 
-	public void setCartype(CarTypes cartype) {
+	public void setCartype(VehicleTypes cartype) {
 		this.cartype = cartype;
 	}
 
-	public CarStatus getCarstatus() {
+	public VehicleStatus getCarstatus() {
 		return carstatus;
 	}
 
-	public void setCarstatus(CarStatus carstatus) {
+	public void setCarstatus(VehicleStatus carstatus) {
 		this.carstatus = carstatus;
 	}
 

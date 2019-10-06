@@ -10,34 +10,34 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
-public class CarTypes {
+public class VehicleTypes {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="Id")
 	private long id;
 	
-	@Column(name="Mercedes Type")
+	@Column(name="MercedesType")
 	private String[] mercedes;
 	
-	@Column(name="Toyota Type")
+	@Column(name="ToyotaType")
 	private String[] toyota;
 	
-	@Column(name="Chevrolet Type")
+	@Column(name="ChevroletType")
 	private String[] chevrolet;
 	
-	@Column(name="Lexus Type")
+	@Column(name="LexusType")
 	private String[] lexus;
 	
-	@Column(name="Mazda Type")
+	@Column(name="MazdaType")
 	private String[] mazda;
 	
-	@Column(name="Mitsubushi Type")
+	@Column(name="MitsubushiType")
 	private String[] mitsubushi;
 	
 	@ManyToOne
 	@JoinColumn(name="Admin_Email")
-	private Admin admin;
+	private Admins admin;
 	
 	@OneToOne
 	private Guests guest;
@@ -47,7 +47,7 @@ public class CarTypes {
 	private Users user;
 	
 	@OneToOne
-	private CarStatus carstatus;
+	private VehicleStatus carstatus;
 
 	public Long getId() {
 		return id;
@@ -105,11 +105,11 @@ public class CarTypes {
 		this.mitsubushi = mitsubushi;
 	}
 
-	public Admin getAdmin() {
+	public Admins getAdmin() {
 		return admin;
 	}
 
-	public void setAdmin(Admin admin) {
+	public void setAdmin(Admins admin) {
 		this.admin = admin;
 	}
 
@@ -129,11 +129,11 @@ public class CarTypes {
 		this.user = user;
 	}
 
-	public CarStatus getCarstatus() {
+	public VehicleStatus getCarstatus() {
 		return carstatus;
 	}
 
-	public void setCarstatus(CarStatus carstatus) {
+	public void setCarstatus(VehicleStatus carstatus) {
 		this.carstatus = carstatus;
 	}
 
